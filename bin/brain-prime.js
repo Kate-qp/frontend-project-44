@@ -17,7 +17,7 @@ const playGame = () => {
     console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
 
     for (let i = 0; i < 3; i++) {
-        const number = Math.floor(Math.random() * 100) + 1; // Генерация случайного числа от 1 до 100
+        const number = Math.floor(Math.random() * 100) + 1;
         const correctAnswer = isPrime(number) ? 'yes' : 'no';
         console.log(`Question: ${number}`);
         const userAnswer = readlineSync.question('Your answer: ');

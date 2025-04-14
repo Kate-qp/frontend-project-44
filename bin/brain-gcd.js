@@ -1,6 +1,5 @@
 import readlineSync from 'readline-sync';
 
-// Функция для вычисления НОД
 const gcd = (a, b) => {
     while (b) {
         [a, b] = [b, a % b];
@@ -8,7 +7,6 @@ const gcd = (a, b) => {
     return a;
 };
 
-// Основная логика игры
 const playGame = () => {
     console.log('Welcome to the Brain Games!');
     const name = readlineSync.question('May I have your name? ');
