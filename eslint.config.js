@@ -8,7 +8,7 @@ export default defineConfig([
     files: ['**/*.{js,mjs,cjs}'],
     plugins: {
       js,
-      '@stylistic': stylistic
+      '@stylistic': stylistic,
     },
     extends: ['js/recommended'],
     rules: {
@@ -18,13 +18,14 @@ export default defineConfig([
       '@stylistic/indent': ['error', 2],
       '@stylistic/no-multi-spaces': ['error'],
       '@stylistic/arrow-parens': ['error', 'as-needed'],
-      '@stylistic/no-multiple-empty-lines': ['error', { max: 1 }]
-    }
+      '@stylistic/no-multiple-empty-lines': ['error', { max: 1 }],
+      '@stylistic/comma-dangle': ['error', 'always-multiline'],
+    },
   },
   {
     files: ['**/*.{js,mjs,cjs}'],
     languageOptions: {
-      globals: globals.browser
-    }
-  }
+      globals: globals.browser,
+    },
+  },
 ])
