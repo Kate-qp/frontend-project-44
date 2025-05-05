@@ -13,7 +13,7 @@ const isPrime = (number) => {
   return true
 }
 
-const description = `Answer "yes" if given number is prime. Otherwise answer "no".`
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 const gameLogic = () => {
   const randomNumber = getRandomNumber(1, 100)
