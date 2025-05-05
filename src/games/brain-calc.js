@@ -27,7 +27,7 @@ const generateRound = () => {
   const question = `${number1} ${operator} ${number2}`
   const correctAnswer = calculate(number1, number2, operator).toString()
   return [question, correctAnswer]
-};
+}
 
 const startCalcGame = () => {
   startGame(description, generateRound)
