@@ -11,14 +11,11 @@ const isPrime = (number) => {
   }
   return true;
 };
-const DESCRIPTION = 'Answer "yes" if the given number is prime. Otherwise answer "no".';
-const getData = () => {
-  const number = getRandomNumber(1, 100);
-  const question = `Question: ${number}`;
-  const correctAnswer = isPrime(number) ? 'yes' : 'no';
-  return [question, correctAnswer];
+const description = 'Answer "yes" if the given number is prime. Otherwise answer "no".';
+const gameLogic = () => {
+  const randomNumber = getRandomNumber(1, 100);
+  const correctAnswer = isPrime(randomNumber) ? 'yes' : 'no'; 
+  return { correctAnswer, question: `Question: ${randomNumber}` }; 
 };
-export default () => {
-  console.log(DESCRIPTION);
-  startGame(DESCRIPTION, getData);
-};
+
+export default () => startGame(description, gameLogic);
