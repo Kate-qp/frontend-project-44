@@ -1,19 +1,18 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
-  "description": "",
+  "description": "[![Actions Status](https://github.com/Kate-qp/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Kate-qp/frontend-project-44/actions)",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "install": "npm ci",
-    "brain-games": "node bin/brain-games.js",
-    "brain-even": "node bin/brain-even.js",
-    "brain-calc": "node bin/brain-calc.js",
-    "brain-gcd": "node bin/brain-gcd.js",
-    "brain-progression": "node bin/brain-progression.js",
-    "brain-prime": "node bin/brain-prime.js",
-    "publish": "npm publish --dry-run"
-  },
+  "test": "echo \"Error: no test specified\" && exit 1",
+  "brain-games": "node bin/brain-games.js",
+  "brain-even": "node bin/brain-even.js",
+  "brain-calc": "node bin/brain-calc.js",
+  "brain-gcd": "node bin/brain-gcd.js",
+  "brain-progression": "node bin/brain-progression.js",
+  "brain-prime": "node bin/brain-prime.js",
+  "publish": "npm publish --dry-run"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -34,5 +33,13 @@
     "eslint": "^9.26.0",
     "eslint-plugin-react": "^7.37.5",
     "globals": "^16.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kate-qp/frontend-project-44.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Kate-qp/frontend-project-44/issues"
+  },
+  "homepage": "https://github.com/Kate-qp/frontend-project-44#readme"
 }
