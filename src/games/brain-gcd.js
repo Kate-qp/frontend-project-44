@@ -1,25 +1,25 @@
-import { getRandomNumber } from '../../utils/random-value.js';
-import startGame from '../index.js';
+import { getRandomNumber } from '../../utils/random-value.js'
+import startGame from '../index.js'
 
-const description = 'Find the greatest common divisor of given numbers.';
+const description = 'Find the greatest common divisor of given numbers.'
 
 const gcd = (a, b) => {
   while (b) {
-    [a, b] = [b, a % b];
+    [a, b] = [b, a % b]
   }
-  return a;
-};
+  return a
+}
 
 const generateRound = () => {
-  const num1 = getRandomNumber();
-  const num2 = getRandomNumber();
-  const question = `${num1} ${num2}`;
-  const correctAnswer = gcd(num1, num2).toString();
-  return [question, correctAnswer];
-};
+  const num1 = getRandomNumber()
+  const num2 = getRandomNumber()
+  const question = `${num1} ${num2}`
+  const correctAnswer = gcd(num1, num2).toString()
+  return [question, correctAnswer]
+}
 
 const startGcdGame = () => {
-  startGame(description, generateRound);
-};
+  startGame(description, generateRound)
+}
 
-export default startGcdGame;
+export default startGcdGame
