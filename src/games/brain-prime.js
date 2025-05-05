@@ -1,5 +1,6 @@
-import startGame from '../index.js'; // Убедитесь, что путь к index.js правильный
-import { getRandomNumber } from '../../utils/random-value.js'; // Убедитесь, что путь к random-value.js правильный
+import startGame from '../index.js';
+import { getRandomNumber } from '../../utils/random-value.js'; 
+import readlineSync from 'readline-sync'; 
 const isPrime = (number) => {
   if (number < 2) {
     return false;
@@ -13,9 +14,15 @@ const isPrime = (number) => {
 };
 const description = 'Answer "yes" if the given number is prime. Otherwise answer "no".';
 const gameLogic = () => {
-  const randomNumber = getRandomNumber(1, 100); // Генерируем случайное число от 1 до 100
-  const correctAnswer = isPrime(randomNumber) ? 'yes' : 'no'; // Определяем правильный ответ
-  return [`Question: ${randomNumber}`, correctAnswer]; // Возвращаем вопрос и правильный ответ в виде массива
+  const randomNumber = getRandomNumber(1, 100); 
+  const correctAnswer = isPrime(randomNumber) ? 'yes' : 'no'; 
+  return [`Question: ${randomNumber}`, correctAnswer]; 
 };
 // Запускаем игру
-export default () => startGame(description, gameLogic);
+export default () => {
+  console.log('Welcome to the Brain Games!');
+  const playerName = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${playerName}!`);
+  console.log(description);
+  startGame(description, gameLogic);
+};
