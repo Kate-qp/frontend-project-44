@@ -18,10 +18,10 @@ const description = 'Answer "yes" if the given number is prime. Otherwise answer
 const gameLogic = () => {
   const randomNumber = getRandomNumber(1, 100);
   const correctAnswer = isPrime(randomNumber) ? 'yes' : 'no';
-  const question = `Question: ${randomNumber}`; 
+  const question = `${randomNumber}`; 
   return [question, correctAnswer];
 };
 
 export default () => {
-  startGame(description, gameLogic); 
+  startGame(description, gameLogic);
 };
