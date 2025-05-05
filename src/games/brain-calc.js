@@ -31,6 +31,6 @@ const generateRound = () => {
 
 const startCalcGame = () => {
   startGame(description, generateRound)
-};
+}
 
 export default startCalcGame
